@@ -7,6 +7,69 @@
 .header {
 }
 
+// ----------------------------------- WELCOME -------------------------
+
+.navbar {
+  margin-bottom: 128px;
+  &__list {
+    display: flex;
+  }
+  &__item {
+    &:not(:last-child) {
+      margin-right: 24px;
+    }
+    &-link {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+.welcome {
+  background-color: $accent;
+  background-image: url(../images/welcome-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: right;
+  &__inner {
+    padding: 30px 30px 30px 0;
+    width: 440px;
+    background-color: $accent;
+  }
+  &__title {
+    @extend %roboto-300;
+    font-size: 48px;
+    line-height: 58px;
+    margin-bottom: 14px;
+  }
+  &__text {
+    font-size: 17px;
+    line-height: 25px;
+    margin-bottom: 46px;
+  }
+  &-btn {
+    // padding: 13px 52px;
+    width: 192px;
+    height: 48px;
+    font-size: 14px;
+    line-height: 22px;
+    border-radius: 24px;
+    &:hover {
+      cursor: pointer;
+      box-shadow: 0 0 4px $defoult;
+    }
+    &--dark {
+      background-color: $defoult;
+      color: $accent;
+      margin-right: 18px;
+    }
+    &--light {
+      background-color: transparent;
+      border: 1px solid $defoult;
+    }
+  }
+}
+
+// ----------------------------------- WELCOME END -------------------------
 // ----------------------------------- FOOTER -------------------------
 
 .footer {
